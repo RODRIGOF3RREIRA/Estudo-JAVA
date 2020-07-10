@@ -2,23 +2,31 @@
 package estudo_poo;
 
 public class Cadeira {
-    float altura;
-    float altura_assento;
-    String cor;
+    private double altura;
+    private double altura_assento;
+    private String  cor;
     
-    void serrar (){
+    public Cadeira(){
+        cor = "Marrom";
+        altura =  1.00;
+        altura_assento = 1.42;
+    }
+    
+    
+     public void serrar (){
         System.out.println("Serrando a madeira...");
     }
     
-    void lixar (){
+   public  void lixar (){
         System.out.println("Lixando a cadeira");
     }
     
-    void pintar (){
+    public void pintar (){
         System.out.println("Pintando a madeira");
     }
     
- 
-        
-    
+ public String getCor (){
+     return cor;
+        } 
 }
+
