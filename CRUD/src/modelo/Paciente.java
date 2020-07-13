@@ -1,16 +1,17 @@
 package modelo;
 
-public class Paciente {
-        private String nome;
+public class Paciente extends Pessoa{
         private Exame exame;
 
+        @Override
     public String getNome() {
-        return nome;
+        if (super.getNome() == null){
+            return  "Paciente";
+        }
+        return super.getNome();
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    
      
     public Exame getExame ()  {
         return exame;
