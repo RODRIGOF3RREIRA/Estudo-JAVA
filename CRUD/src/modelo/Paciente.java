@@ -3,6 +3,13 @@ package modelo;
 public class Paciente extends Pessoa{
         private Exame exame;
 
+        public Paciente(String nome, String email, String telefone){
+            super.setNome(nome);
+            super.setEmail(email);
+            super.setTelefone(telefone);
+            
+        }
+        
         @Override
     public String getNome() {
         if (super.getNome() == null){
