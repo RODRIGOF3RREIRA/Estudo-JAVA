@@ -15,9 +15,9 @@ public class Conexao {
      try {
          Class.forName("com.mysql.jbdc.Driver");
          
-         String url = "jbdc:mysql://https://databases-auth.000webhost.com/db_structure.php?server=1&db=id14379488_crudprova";
-         String usuario = "id14379488_cruduser";
-         String senha = "Wk80LPA~Y$d1*pW~";
+         String url = "jdbc:mysql://database-1.cc6iprshiwg0.sa-east-1.rds.amazonaws.com/fazfatec";
+         String usuario = "admin";
+         String senha = "admin123";
          
          conn = DriverManager.getConnection(url, usuario, senha);
      } catch (ClassNotFoundException ex) {
