@@ -13,11 +13,11 @@ public class Conexao {
  
  public void conectar() {
      try {
-         Class.forName("com.mysql.jbdc.Driver");
+         Class.forName("com.mysql.cj.jbdc.Driver");
          
-         String url = "jdbc:mysql://database-1.cc6iprshiwg0.sa-east-1.rds.amazonaws.com/fazfatec";
-         String usuario = "admin";
-         String senha = "admin123";
+         String url = "jdbc:mysql://databases.000webhost.com/sql.php?db=id14033772_covid&table=paciente&pos=0";
+         String usuario = "id14033772_joaojesus";
+         String senha = "Winchester.22";
          
          conn = DriverManager.getConnection(url, usuario, senha);
      } catch (ClassNotFoundException ex) {
