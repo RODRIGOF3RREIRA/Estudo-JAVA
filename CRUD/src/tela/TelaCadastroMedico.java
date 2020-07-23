@@ -6,7 +6,7 @@
 package tela;
 
 import javax.swing.JOptionPane;
-import modelo.Paciente;
+import modelo.Medico;
 
 /**
  *
@@ -43,6 +43,12 @@ public class TelaCadastroMedico extends javax.swing.JFrame {
 
         jLabel1.setText("Nome:");
 
+        txt_nome_medico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_nome_medicoActionPerformed(evt);
+            }
+        });
+
         jLabel2.setText("Área:");
 
         txt_area_medico.addActionListener(new java.awt.event.ActionListener() {
@@ -65,26 +71,26 @@ public class TelaCadastroMedico extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txt_nome_medico, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(18, 18, 18)
-                                .addComponent(txt_area_medico))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txt_codigo_medico))))
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txt_nome_medico))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(86, 86, 86)
-                        .addComponent(jButton1)))
-                .addContainerGap(29, Short.MAX_VALUE))
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(txt_area_medico))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_codigo_medico, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jButton1)
+                                .addGap(53, 53, 53)))))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -101,9 +107,9 @@ public class TelaCadastroMedico extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txt_codigo_medico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(23, 23, 23))
+                .addGap(27, 27, 27))
         );
 
         pack();
@@ -116,20 +122,24 @@ public class TelaCadastroMedico extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
            String nome = txt_nome_medico.getText();
-        String email = txt_area_medico.getText();
-        String telefone = txt_codigo_medico.getText();
+        String area = txt_area_medico.getText();
+        String codigo = txt_codigo_medico.getText();
         
-        Paciente p = new Paciente(nome, email, telefone);
+        Medico m = new Medico(nome, area, codigo);
         System.out.println("Cadastro Médico");
-        System.out.println("Nome: " + p.getNome());
-        System.out.println("E-mail: " + p.getEmail());
-        System.out.println("Telefone: " + p.getTelefone());
+        System.out.println("Nome: " + m.getNome());
+        System.out.println("Área: " + m.getArea());
+        System.out.println("Código: " + m.getCodigo());
         
         txt_nome_medico.setText(" ");
         txt_area_medico.setText(" ");
         txt_codigo_medico.setText(" ");
         JOptionPane.showMessageDialog(null, "Cadastrado com Sucesso");
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txt_nome_medicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_nome_medicoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_nome_medicoActionPerformed
 
     /**
      * @param args the command line arguments

@@ -7,9 +7,12 @@ package modelo;
  */
 public class Medico extends Pessoa {
     
-     public Medico(String nome, String email, String telefone){
+    
+     public Medico(String nome, String area, String codigo){
             super.setNome(nome);
-            super.setEmail(email);
-            super.setTelefone(telefone);
+            super.setArea(area);
+            super.setCodigo(codigo);
      }
+
+ 
 }
