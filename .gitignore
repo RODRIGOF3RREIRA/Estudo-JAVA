@@ -15,3 +15,5 @@ Listas.java
 *.xml
 /Exercicios/vetor/ex04/nbproject/private/
 *.properties
+/SisCovid/nbproject/private/
+/SisCovid/build/
