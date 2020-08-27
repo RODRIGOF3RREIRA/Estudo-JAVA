@@ -17,3 +17,5 @@ Listas.java
 *.properties
 /SisCovid/nbproject/private/
 /SisCovid/build/
+/Exercicios_vetor/build/
+/Exercicios_vetor/dist/
