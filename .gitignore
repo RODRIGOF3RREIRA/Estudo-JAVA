@@ -14,3 +14,4 @@
 Listas.java
 *.xml
 /Exercicios/vetor/ex04/nbproject/private/
+*.properties
