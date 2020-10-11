@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="CRUD/src"/>
+	<classpathentry kind="src" path="Estudo_matriz/src"/>
+	<classpathentry kind="src" path="Estudo_piilha/src"/>
+	<classpathentry kind="src" path="Estudo_POO_jogo/src"/>
+	<classpathentry kind="src" path="Estudo_POO/src"/>
+	<classpathentry kind="src" path="Interface_cadastro/src"/>
+	<classpathentry kind="src" path="Interface/src"/>
+	<classpathentry kind="src" path="lista_est_dados_01/src"/>
+	<classpathentry kind="src" path="ProjetoCovid/ProjetoCovid/src"/>
+	<classpathentry kind="src" path="SisBanco/src"/>
+	<classpathentry kind="src" path="SisCovid/src"/>
+	<classpathentry kind="lib" path="ProjetoCovid/ProjetoCovid/lib/CopyLibs/org-netbeans-modules-java-j2seproject-copylibstask.jar"/>
+	<classpathentry kind="lib" path="ProjetoCovid/ProjetoCovid/lib/mysql-connector-java-5.1.49-bin.jar"/>
+	<classpathentry kind="lib" path="ProjetoCovid/ProjetoCovid/lib/mysql-connector-java-5.1.49.jar"/>
+	<classpathentry kind="output" path="ProjetoCovid/ProjetoCovid/build/classes"/>
+</classpath>
